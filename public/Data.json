@@ -1,7 +1,7 @@
 [
   {
     "playerName": "Virat Kohli",
-    "playerImg": "https://example.com/images/virat-kohli.jpg",
+    "playerImg": "https://i.ibb.co.com/VY8S9S5b/kohli231007.jpg",
     "country": "India",
     "rating": 9.8,
     "battingStyle": "Right-hand bat",
@@ -11,7 +11,7 @@
   },
   {
     "playerName": "Babar Azam",
-    "playerImg": "https://example.com/images/babar-azam.jpg",
+    "playerImg": "https://i.ibb.co.com/M5ZnSJS2/AFP-20240530-34-UE7-A9-v1-High-Res-776146379-1717617996.webp",
     "country": "Pakistan",
     "rating": 9.5,
     "battingStyle": "Right-hand bat",
@@ -21,7 +21,7 @@
   },
   {
     "playerName": "Ben Stokes",
-    "playerImg": "https://example.com/images/ben-stokes.jpg",
+    "playerImg": "https://i.ibb.co.com/23c3jMKs/ben-stokes-struck-a-match-winning-52-in-the-t20-world-cup-final.webp",
     "country": "England",
     "rating": 9.3,
     "battingStyle": "Left-hand bat",
@@ -31,7 +31,7 @@
   },
   {
     "playerName": "Kane Williamson",
-    "playerImg": "https://example.com/images/kane-williamson.jpg",
+    "playerImg": "https://i.ibb.co.com/fzdQ3XD6/Kane-Williamson-Thumb-injury.webp",
     "country": "New Zealand",
     "rating": 9.2,
     "battingStyle": "Right-hand bat",
@@ -41,7 +41,7 @@
   },
   {
     "playerName": "Shakib Al Hasan",
-    "playerImg": "https://example.com/images/shakib-al-hasan.jpg",
+    "playerImg": "https://i.ibb.co.com/FSC26wG/cr-2024092666f5253ad025d.jpg",
     "country": "Bangladesh",
     "rating": 9.4,
     "battingStyle": "Left-hand bat",
