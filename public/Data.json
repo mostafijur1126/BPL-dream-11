@@ -1,0 +1,52 @@
+[
+  {
+    "playerName": "Virat Kohli",
+    "playerImg": "https://example.com/images/virat-kohli.jpg",
+    "country": "India",
+    "rating": 9.8,
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm medium",
+    "playerType": "Batsman",
+    "price": 1500000
+  },
+  {
+    "playerName": "Babar Azam",
+    "playerImg": "https://example.com/images/babar-azam.jpg",
+    "country": "Pakistan",
+    "rating": 9.5,
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm offbreak",
+    "playerType": "Batsman",
+    "price": 1400000
+  },
+  {
+    "playerName": "Ben Stokes",
+    "playerImg": "https://example.com/images/ben-stokes.jpg",
+    "country": "England",
+    "rating": 9.3,
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Right-arm fast-medium",
+    "playerType": "All-Rounder",
+    "price": 1450000
+  },
+  {
+    "playerName": "Kane Williamson",
+    "playerImg": "https://example.com/images/kane-williamson.jpg",
+    "country": "New Zealand",
+    "rating": 9.2,
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm offbreak",
+    "playerType": "Batsman",
+    "price": 1350000
+  },
+  {
+    "playerName": "Shakib Al Hasan",
+    "playerImg": "https://example.com/images/shakib-al-hasan.jpg",
+    "country": "Bangladesh",
+    "rating": 9.4,
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Slow left-arm orthodox",
+    "playerType": "All-Rounder",
+    "price": 1300000
+  }
+]
