@@ -5,6 +5,7 @@ import SelectedPlayers from '../SelectedPlayers/SelectedPlayers';
 const PlayersInfo = ({ playerPromise, coin, setCoin}) => {
     const playerData = use(playerPromise)
     const [activeType, setActiveType] = useState("Available");
+    const [selectedPlayers, setSelectedPlayers] = useState([]);
 
     // console.log(activeType);
     return (
@@ -32,9 +33,9 @@ const PlayersInfo = ({ playerPromise, coin, setCoin}) => {
 
             </div>
             {activeType === "Available" ?
-                <AvailablePlayers playerData={playerData} coin={coin} setCoin={setCoin}></AvailablePlayers>
+                <AvailablePlayers playerData={playerData} coin={coin} setCoin={setCoin} selectedPlayers={selectedPlayers} setSelectedPlayers={setSelectedPlayers} ></AvailablePlayers>
                 :
-                <SelectedPlayers></SelectedPlayers>}
+                <SelectedPlayers selectedPlayers={selectedPlayers} setSelectedPlayers={setSelectedPlayers}></SelectedPlayers>}
 
         </div>
     );
