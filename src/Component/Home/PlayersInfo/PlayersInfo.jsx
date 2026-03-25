@@ -6,6 +6,7 @@ const PlayersInfo = ({ playerPromise, coin, setCoin}) => {
     const playerData = use(playerPromise)
     const [activeType, setActiveType] = useState("Available");
     const [selectedPlayers, setSelectedPlayers] = useState([]);
+    console.log(selectedPlayers);
 
     // console.log(activeType);
     return (
@@ -14,7 +15,7 @@ const PlayersInfo = ({ playerPromise, coin, setCoin}) => {
                 {activeType === "Available" ?
                     <h1 className='text-3xl font-bold'>Available Players</h1>
                     :
-                    <h1 className='text-3xl font-bold'>Selected Players (0)</h1>}
+                    <h1 className='text-3xl font-bold'>Selected Players ({selectedPlayers.length}/ {playerData.length})</h1>}
 
                 <div>
                     <button
@@ -27,7 +28,7 @@ const PlayersInfo = ({ playerPromise, coin, setCoin}) => {
                         onClick={() => setActiveType("Selected")}
                         className={`btn ${activeType === "Selected" ? "bg-[#E7FE29]" : "btn"} rounded-r-xl rounded-l-none`}
                     >
-                        Selected
+                        Selected {selectedPlayers.length}
                     </button>
                 </div>
 

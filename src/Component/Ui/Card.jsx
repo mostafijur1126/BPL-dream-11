@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { FaFlag, FaUser } from 'react-icons/fa6';
-const Card = ({players,index,coin , setCoin, setSelectedPlayers}) => {
+const Card = ({players,index,coin , setCoin,selectedPlayers, setSelectedPlayers}) => {
     const [selected, setSelected] = useState(false);
     const handelSelectPlayer = ()=>{
         const claculateCoin = coin - players.price;
         if(claculateCoin > 0 ){
             setCoin(coin - players.price);
             alert(`${players.playerName} Is Selected `)
-            setSelectedPlayers(players);
+            setSelectedPlayers([...selectedPlayers,players]);
         }else{
             alert("Not Available coin");
             return
