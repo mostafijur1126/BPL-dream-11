@@ -238,15 +238,5 @@
     "bowlingStyle": "Right-arm fast",
     "playerType": "Bowler",
     "price": 1380000
-  },
-  {
-    "playerName": "Shoaib Akhtar",
-    "playerImg": "https://i.ibb.co.com/sample/akhtar.jpg",
-    "country": "Pakistan",
-    "rating": 9.2,
-    "battingStyle": "Right-hand bat",
-    "bowlingStyle": "Right-arm fast",
-    "playerType": "Bowler",
-    "price": 1370000
   }
 ]
