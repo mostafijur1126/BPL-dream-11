@@ -3,7 +3,7 @@ import footerImg from "../../assets/logo-footer.png"
 const Footer = () => {
     return (
         <div className='bg-[#06091A]'>
-            <div className="">
+            <div className="pt-45 relative z-0">
                 <img className='mx-auto px-4' src={footerImg} alt="" />
                 <footer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 container mx-auto px-6 py-10 text-base-content">
                     <nav className='text-white text-center sm:text-left'>
