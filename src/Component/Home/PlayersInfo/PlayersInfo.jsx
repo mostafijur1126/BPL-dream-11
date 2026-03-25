@@ -36,7 +36,7 @@ const PlayersInfo = ({ playerPromise, coin, setCoin}) => {
             {activeType === "Available" ?
                 <AvailablePlayers playerData={playerData} coin={coin} setCoin={setCoin} selectedPlayers={selectedPlayers} setSelectedPlayers={setSelectedPlayers} ></AvailablePlayers>
                 :
-                <SelectedPlayers selectedPlayers={selectedPlayers} setSelectedPlayers={setSelectedPlayers}></SelectedPlayers>}
+                <SelectedPlayers coin={coin} setCoin={setCoin} selectedPlayers={selectedPlayers} setSelectedPlayers={setSelectedPlayers}></SelectedPlayers>}
 
         </div>
     );
