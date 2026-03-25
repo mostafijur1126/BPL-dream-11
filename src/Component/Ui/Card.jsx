@@ -7,10 +7,16 @@ const Card = ({players,index,coin , setCoin,selectedPlayers, setSelectedPlayers}
         const claculateCoin = coin - players.price;
         if(claculateCoin > 0 ){
             setCoin(coin - players.price);
-            toast(`${players.playerName} Is Selected `);
+            toast.success(`${players.playerName} Is Selected `,{
+                position: "top-center",
+                autoClose: 1000,
+            });
             setSelectedPlayers([...selectedPlayers,players]);
         }else{
-            toast("Not Available coin");
+            toast.warn("Not Available coin",{
+                position: "top-center",
+                autoClose: 2000,
+            });
             return
         }
         setSelected(true)

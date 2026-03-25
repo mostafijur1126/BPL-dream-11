@@ -1,6 +1,5 @@
 import React from 'react';
-import { FaUser } from 'react-icons/fa6';
-import { MdDelete } from 'react-icons/md';
+import SelectedCard from '../../Ui/SelectedCard';
 
 const SelectedPlayers = ({ selectedPlayers, setSelectedPlayers, coin, setCoin }) => {
     // console.log(selectedPlayers);
@@ -15,24 +14,16 @@ const SelectedPlayers = ({ selectedPlayers, setSelectedPlayers, coin, setCoin })
     return (
         <div>
             {
+                selectedPlayers.length === 0 ? 
+                <div className='flex flex-col items-center justify-center h-60'>
+                    <h1 className='text-2xl font-bold text-gray-500'>No player selected yet </h1>
+                    <p className='text-gray-400 my-3'>Go to Available tab to select players</p>
+                </div> 
+                : 
                 selectedPlayers.map((player, index) => {
-                    return <div key={index}>
-                        <div className='my-5'>
-                            <div className=' flex items-center justify-between border p-5 rounded-md'>
-                                <div className='flex items-center gap-5'>
-                                    <div className='h-[75px] w-[75px] overflow-hidden'>
-                                    <img className=' h-full w-full object-cover  rounded-md'  src={player.playerImg} alt={player.playerName} />
-                                    </div>
-                                    <div>
-                                        <h2 className='text-xl font-bold flex items-center gap-2'><FaUser />{player.playerName}</h2>
-                                        <p >{player.playerType}</p>
-                                    </div>
-                                </div>
-                                    <button onClick={() => handelFilterSelectedPlayer(player)} className='btn text-red-600'><MdDelete /></button>
-                            </div>
-
-                        </div>
-                    </div>
+                    return (
+                        <SelectedCard key={index} player={player} handelFilterSelectedPlayer= {handelFilterSelectedPlayer}></SelectedCard>
+                    )
                 })
             }
         </div>
