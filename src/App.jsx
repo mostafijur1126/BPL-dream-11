@@ -4,6 +4,7 @@ import './App.css'
 import Banner from './Component/Home/Banner/Banner'
 import PlayersInfo from './Component/Home/PlayersInfo/PlayersInfo'
 import Navbar from './Component/Navbar/Navbar'
+import { ToastContainer } from 'react-toastify'
 
 const loadData = async () => {
   const res = await fetch("/Data.json");
@@ -16,12 +17,13 @@ function App() {
 
   return (
     <>
-     <Navbar coin={coin}></Navbar>
-     <Banner></Banner>
-     <Suspense fallback={<span className="loading loading-dots loading-xl"></span>}>
-      <PlayersInfo playerPromise={playerPromise} coin={coin} setCoin={setCoin}></PlayersInfo>
-     </Suspense>
-     {/* <PlayerCard></PlayerCard> */}
+      <Navbar coin={coin}></Navbar>
+      <Banner></Banner>
+      <Suspense fallback={<span className="loading loading-dots loading-xl"></span>}>
+        <PlayersInfo playerPromise={playerPromise} coin={coin} setCoin={setCoin}></PlayersInfo>
+      </Suspense>
+      {/* react tostify */}
+      <ToastContainer />
     </>
   )
 }
