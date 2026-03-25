@@ -4,6 +4,12 @@ import { MdDelete } from 'react-icons/md';
 
 const SelectedPlayers = ({ selectedPlayers, setSelectedPlayers }) => {
     // console.log(selectedPlayers);
+    const handelFilterSelectedPlayer = (player) =>{
+        const filteredPlayer = selectedPlayers.filter(filterPlayer =>
+        filterPlayer.playerName !== player.playerName);
+        setSelectedPlayers(filteredPlayer);
+    // console.log(filteredPlayer);
+    }
     return (
         <div>
             {
@@ -20,7 +26,7 @@ const SelectedPlayers = ({ selectedPlayers, setSelectedPlayers }) => {
                                         <p >{player.playerType}</p>
                                     </div>
                                 </div>
-                                    <button className='btn text-red-600'><MdDelete /></button>
+                                    <button onClick={() => handelFilterSelectedPlayer(player)} className='btn text-red-600'><MdDelete /></button>
                             </div>
 
                         </div>

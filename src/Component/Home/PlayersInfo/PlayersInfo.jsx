@@ -6,7 +6,7 @@ const PlayersInfo = ({ playerPromise, coin, setCoin}) => {
     const playerData = use(playerPromise)
     const [activeType, setActiveType] = useState("Available");
     const [selectedPlayers, setSelectedPlayers] = useState([]);
-    console.log(selectedPlayers);
+    // console.log(selectedPlayers);
 
     // console.log(activeType);
     return (
