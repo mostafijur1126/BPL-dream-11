@@ -4,7 +4,7 @@ import Card from '../../Ui/Card';
 const AvailablePlayers = ({ playerData, coin, setCoin, setSelectedPlayers,selectedPlayers }) => {
     // console.log(playerData)
     return (
-        <div className=' grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
+        <div className='mx-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
 
             {
                 playerData.map((players,index) => {

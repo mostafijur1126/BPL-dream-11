@@ -3,7 +3,7 @@ import bannerImg from "../../../assets/banner-main.png"
 const Banner = () => {
     return (
         <div className="container mx-auto">
-            <div className=" h-[450px] rounded-3xl flex  items-center justify-center text-center relative overflow-hidden
+            <div className=" mx-2 h-[450px] rounded-3xl flex  items-center justify-center text-center relative overflow-hidden
               bg-gradient-to-r from-indigo-500 via-black to-[#c79a8d]">
                 <div className="flex flex-col items-center z-10 px-6">
                     <img src={bannerImg} alt="Cricket Logo" className="mx-auto mb-6 w-32" />

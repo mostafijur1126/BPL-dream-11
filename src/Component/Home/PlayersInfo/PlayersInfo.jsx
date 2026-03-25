@@ -10,12 +10,12 @@ const PlayersInfo = ({ playerPromise, coin, setCoin}) => {
 
     // console.log(activeType);
     return (
-        <div className="container mx-auto mb-20">
-            <div className='flex justify-between items-center my-5'>
+        <div className="container mx-auto md:mb-20">
+            <div className='mx-2 flex justify-between items-center my-5'>
                 {activeType === "Available" ?
-                    <h1 className='text-3xl font-bold'>Available Players</h1>
+                    <h1 className='text-xl md:text-3xl font-bold'>Available Players</h1>
                     :
-                    <h1 className='text-3xl font-bold'>Selected Players ({selectedPlayers.length}/ {playerData.length})</h1>}
+                    <h1 className=' md:text-3xl font-bold'>Selected Players ({selectedPlayers.length}/ {playerData.length})</h1>}
 
                 <div>
                     <button

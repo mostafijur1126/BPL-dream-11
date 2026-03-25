@@ -29,7 +29,7 @@ const Footer = () => {
                                     type="text"
                                     placeholder="username@site.com"
                                     className="input input-bordered join-item w-full rounded-l-2xl" />
-                                <button className="btn btn-primary join-item rounded-r-2xl">Subscribe</button>
+                                <button className="btn border-none bg-gradient-to-r from-[#EC7A] to-[#AC2242] rounded-r-2xl">Subscribe</button>
                             </div>
                         </fieldset>
                     </form>

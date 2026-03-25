@@ -12,7 +12,7 @@ const SelectedPlayers = ({ selectedPlayers, setSelectedPlayers, coin, setCoin })
     // console.log(returnCoin);
     }
     return (
-        <div>
+        <div className='mx-2'>
             {
                 selectedPlayers.length === 0 ? 
                 <div className='flex flex-col items-center justify-center h-60'>

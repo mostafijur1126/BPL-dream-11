@@ -23,8 +23,8 @@ const Card = ({players,index,coin , setCoin,selectedPlayers, setSelectedPlayers}
     }
     return (
         <div>
-            <div key={index} className='container mx-auto'>
-                        <div  className="card bg-base-100 w-96 shadow-sm">
+            <div key={index} className=''>
+                        <div  className="card bg-base-100  shadow-sm">
                             <figure className='w-full h-48 md:h-64 lg:h-72 overflow-hidden'>
                                 <img className='h-full w-full object-cover'
                                     src={players.playerImg}
