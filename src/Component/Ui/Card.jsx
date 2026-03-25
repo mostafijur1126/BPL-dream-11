@@ -1,6 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaFlag, FaUser } from 'react-icons/fa6';
-const Card = ({players,index}) => {
+const Card = ({players,index,coin , setCoin}) => {
+    const [selected, setSelected] = useState(false);
+    const handelSelectPlayer = ()=>{
+        const claculateCoin = coin - players.price;
+        if(claculateCoin > 0 ){
+            setCoin(coin - players.price);
+            alert(`${players.playerName} Is Selected `)
+        }else{
+            alert("Not Available coin");
+            return
+        }
+        setSelected(true)
+    }
     return (
         <div>
             <div key={index} className='container mx-auto'>
@@ -29,7 +41,12 @@ const Card = ({players,index}) => {
                                 </div>
                                 <div className='flex justify-between'>
                                     <p className=' font-bold'>Price: ${players.price}</p>
-                                    <button className='btn'>Choose Player</button>
+                                    <button 
+                                    onClick={handelSelectPlayer}
+                                    className='btn' 
+                                    disabled={selected}>
+                                        {selected ? "Selected" : "Choose Player" }
+                                    </button>
                                 </div>
 
                             </div>
