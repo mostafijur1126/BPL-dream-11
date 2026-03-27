@@ -1,19 +1,30 @@
 import React, { useState } from 'react';
 import { FaFlag, FaUser } from 'react-icons/fa6';
 import { toast } from 'react-toastify';
-const Card = ({players,index,coin , setCoin,selectedPlayers, setSelectedPlayers}) => {
+const Card = ({ players, index, coin, setCoin, selectedPlayers, setSelectedPlayers }) => {
     const [selected, setSelected] = useState(false);
-    const handelSelectPlayer = ()=>{
-        const claculateCoin = coin - players.price;
-        if(claculateCoin > 0 ){
-            setCoin(coin - players.price);
-            toast.success(`${players.playerName} Is Selected `,{
+    const isExist = selectedPlayers.find((p) => p.playerName === players.playerName);
+    const handelSelectPlayer = () => {
+        if (isExist) {
+            toast.warn("Player already selected!", {
                 position: "top-center",
                 autoClose: 1000,
             });
-            setSelectedPlayers([...selectedPlayers,players]);
-        }else{
-            toast.warn("Not Available coin",{
+            return;
+        }
+
+        const claculateCoin = coin - players.price;
+        if (claculateCoin > 0) {
+
+            setCoin(coin - players.price);
+            toast.success(`${players.playerName} Is Selected `, {
+                position: "top-center",
+                autoClose: 1000,
+            });
+            setSelectedPlayers([...selectedPlayers, players]);
+            // console.log(selectedPlayers, "selected");
+        } else {
+            toast.warn("Not enough coin", {
                 position: "top-center",
                 autoClose: 2000,
             });
@@ -21,45 +32,48 @@ const Card = ({players,index,coin , setCoin,selectedPlayers, setSelectedPlayers}
         }
         setSelected(true)
     }
+
+
+
     return (
         <div>
             <div key={index} className=''>
-                        <div  className="card bg-base-100  shadow-sm">
-                            <figure className='w-full h-48 md:h-64 lg:h-72 overflow-hidden'>
-                                <img className='h-full w-full object-cover'
-                                    src={players.playerImg}
-                                    alt="Shoes" />
-                            </figure>
-                            <div className="card-body">
-                                <h2 className="card-title font-bold"><FaUser /> {players.playerName}</h2>
-                                <div className='flex justify-between text-gray-400'>
-                                    <div className='flex items-center gap-2'>
-                                        <FaFlag />
-                                        <p> {players.country}</p>
-                                    </div>
-                                    <button className='btn text-gray-500'>{players.playerType}</button>
-                                </div>
-                                <div className="divider"></div>
-                                <div>
-                                    <button className=' font-bold'>Rating {players.rating}</button>
-                                </div>
-                                <div className='flex justify-between'>
-                                    <button>{players.battingStyle}</button>
-                                    <button className=' text-gray-500'>{players.bowlingStyle}</button>
-                                </div>
-                                <div className='flex justify-between'>
-                                    <p className=' font-bold'>Price: ${players.price}</p>
-                                    <button 
-                                    onClick={handelSelectPlayer}
-                                    className='btn' 
-                                    disabled={selected}>
-                                        {selected ? "Selected" : "Choose Player" }
-                                    </button>
-                                </div>
-
+                <div className="card bg-base-100  shadow-sm">
+                    <figure className='w-full h-48 md:h-64 lg:h-72 overflow-hidden'>
+                        <img className='h-full w-full object-cover'
+                            src={players.playerImg}
+                            alt="Shoes" />
+                    </figure>
+                    <div className="card-body">
+                        <h2 className="card-title font-bold"><FaUser /> {players.playerName}</h2>
+                        <div className='flex justify-between text-gray-400'>
+                            <div className='flex items-center gap-2'>
+                                <FaFlag />
+                                <p> {players.country}</p>
                             </div>
+                            <button className='btn text-gray-500'>{players.playerType}</button>
                         </div>
+                        <div className="divider"></div>
+                        <div>
+                            <button className=' font-bold'>Rating {players.rating}</button>
+                        </div>
+                        <div className='flex justify-between'>
+                            <button>{players.battingStyle}</button>
+                            <button className=' text-gray-500'>{players.bowlingStyle}</button>
+                        </div>
+                        <div className='flex justify-between'>
+                            <p className=' font-bold'>Price: ${players.price}</p>
+                            <button
+                                onClick={handelSelectPlayer}
+                                className={`btn ${isExist ? "bg-gray-400 cursor-not-allowed" : ""}`}
+                                >
+                                {isExist ? "Selected" : "Choose Player"}
+                            </button>
+                        </div>
+
                     </div>
+                </div>
+            </div>
         </div>
     );
 };

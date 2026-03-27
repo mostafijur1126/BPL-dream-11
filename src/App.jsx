@@ -14,7 +14,7 @@ const loadData = async () => {
 }
 
 function App() {
-  const [coin, setCoin] = useState("3000000");
+  const [coin, setCoin] = useState("30000000");
   const playerPromise = loadData();
 
   return (
